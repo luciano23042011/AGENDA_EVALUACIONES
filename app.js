@@ -63,9 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Registrar Service Worker
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register("sw.js");
-  }
-});
+    navigator.serviceWorker.register("./sw.js", { scope: "./" });
 
 function requestNotificationPermission() {
   if (Notification.permission !== "granted") {
